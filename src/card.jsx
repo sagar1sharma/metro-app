@@ -2,13 +2,6 @@ import ln from './logoandname.png';
 
 function Card(props){
 
-    const data ={
-        from: from, 
-        to: to,
-    };
-
-    props.onClick(data);
-
     return(<div>
         <div className="card"></div>
             <img className='ln' src={ln}></img>
