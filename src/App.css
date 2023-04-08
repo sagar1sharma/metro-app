@@ -1,38 +1,185 @@
-.App {
-  text-align: center;
+.background{
+position: absolute;
+width: 1440px;
+height: 672px;
+left: 0px;
+top: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header{
+position: absolute;
+width: 1339px;
+height: 68px;
+left: 49px;
+top: 6px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logoAndName{
+position: absolute;
+width: 100px;
+height: 42px;
+left: 49px;
+top: 19px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.path6{
+  position: absolute;
+  left: 0%;
+  right: 58.09%;
+  top: 0.01%;
+  bottom: 0.1%;
+
+}
+
+.delhimetro{
+position: absolute;
+left: 45.16%;
+right: 0.47%;
+top: 20.71%;
+bottom: 16.65%;
+}
+
+.dateAndTime{
+  position: absolute;
+width: 277px;
+height: 28px;
+left: 581px;
+top: 139px;
+
+font-family: 'Arial';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+color: #FFFFFF;
+}
+
+.weather{
+position: absolute;
+width: 187px;
+height: 60px;
+left: 621px;
+top: 204px;
+}
+
+.card{
+position: absolute;
+width: 420px;
+height: 469px;
+left: 510px;
+top: 320px;
+background: #FFFFFF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 16px;
+}
+
+.ln{
+  position: absolute;
+  width: 78px;
+  height: 33px;
+  left: 681px;
+  top: 353px;
+}
+
+.btn{
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 5px 10px;
+gap: 10px;
+
+position: absolute;
+width: 138px;
+height: 26px;
+left: 651px;
+top: 571px;
+
+background: #C0282C;
+border-radius: 4px;
+}
+
+.show{
+  width: 118px;
+height: 16px;
+
+font-family: 'Arial';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
+/* identical to box height */
+
+text-transform: capitalize;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.from{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
+  padding: 0px;
+  
+  position: absolute;
+  width: 267px;
+  height: 50px;
+  left: 585px;
+  top: 407px;
+  
+  background: #FFFFFF;
 }
 
-.App-link {
-  color: #61dafb;
+.to{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+position: absolute;
+width: 267px;
+height: 50px;
+left: 585px;
+top: 472px;
+
+background: #FFFFFF;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.slogo{
+  position: absolute;
+width: 42.01px;
+height: 42px;
+left: 699px;
+top: 800px;
+}
+
+.line1{
+position: absolute;
+left: 98px;
+top: 815px;
+}
+
+.line2{
+  position: absolute;
+  left: 98px;
+  top: 830px;
+}
+
+.line3{
+  position: absolute;
+  left: 762px;
+  top: 815px;
+}
+
+.line4{
+  position: absolute;
+  left: 762px;
+  top: 830px;
 }
