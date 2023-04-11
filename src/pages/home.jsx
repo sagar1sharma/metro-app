@@ -4,6 +4,7 @@ import weather from '../Temprature.png';
 import Card from '../card.jsx';
 import logo from '../path6.png';
 import line from '../Line 1.png';
+import "../App.css";
 
 function Home(){
     return(

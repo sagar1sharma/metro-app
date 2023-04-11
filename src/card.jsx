@@ -27,8 +27,8 @@ function Card(props){
   }
 
     return(<div>
-        <div className="card"></div>
             <img className='ln' src={ln}></img>
+        <div className="card"></div>
             <form>
                 <input className="from" type="text" name="from" ref={fromRef}></input>
                 <input className="to" type="text" name="to" ref={toRef}></input>
