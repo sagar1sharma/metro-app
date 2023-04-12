@@ -7,7 +7,7 @@ function Route(){
         <div>
             <h1>Le bhai ise sajale</h1>
             {location.state.path.map((station) => {
-               return <p>{station}</p>
+               return <p key={station}>{station}</p>
             })}
         </div>
     );
