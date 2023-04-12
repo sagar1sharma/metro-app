@@ -41,7 +41,7 @@ bottom: 16.65%;
 
 .dateAndTime{
   position: absolute;
-width: 277px;
+width: 320px;
 height: 28px;
 left: 581px;
 top: 139px;
@@ -73,6 +73,16 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 16px;
 }
 
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  text-align: center;
+}
+
+
 .ln{
   position: absolute;
   width: 78px;
@@ -100,7 +110,7 @@ border-radius: 4px;
 
 .show{
   width: 118px;
-height: 16px;
+height: 26px;
 
 font-family: 'Arial';
 font-style: normal;
@@ -132,6 +142,7 @@ flex-grow: 0;
   height: 50px;
   left: 585px;
   top: 407px;
+  border-radius: 10px;
   
   background: #FFFFFF;
 }
@@ -147,6 +158,7 @@ width: 267px;
 height: 50px;
 left: 585px;
 top: 472px;
+border-radius: 10px;
 
 background: #FFFFFF;
 }
