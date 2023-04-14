@@ -11,19 +11,27 @@ const RouteList = (props) => {
         start = path[0].toUpperCase();
         end = path.slice(-1)[0].toUpperCase();
         interchange = props.data.interchange;
-        interchange = interchange.map(i => i.toUpperCase());
+        console.log(interchange.length);
+        if (interchange.length != 0) {
+            interchange = interchange.map(i => i.toUpperCase());
+        }
         colors = []
         let i = 1;
+        
         while(props.data["line"+i] != undefined) {
-            if(i === 1) {
-                colors.push(props.data["line"+i][0].toUpperCase());
+            let cur = props.data["line"+i]
+            if(i > 1) {
+                if(colors.slice(-1)[0] == cur[0]) {
+                    cur = cur.slice(0);
+                }
             }
-            colors.push(props.data["line"+i][1].toUpperCase());
+            cur.forEach(c => {
+                colors.push(c.toUpperCase());
+            })
             i++;
         }
         startColor = colors[0];
         endColor = colors.slice(-1)[0];
-        console.log(colors);
         colorIdx = 0;
     }
 
@@ -60,7 +68,7 @@ const RouteList = (props) => {
             </div>
             <hr />
             {path.map((station, idx) => {
-                return printName(station);
+                return printName(station, idx);
             })}
         </div>
     </>
