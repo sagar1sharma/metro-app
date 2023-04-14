@@ -15,8 +15,6 @@ function Home(){
     .then(res => setWeather(res.data.current_weather.temperature))
     .catch(err => console.log(err));
 
-    console.log(weather);
-
     return(
         <div className="App">
      <img className = "background" src = {Background} alt = "this"></img>
