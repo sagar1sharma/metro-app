@@ -1,5 +1,5 @@
 import { BsFillArrowRightSquareFill } from 'react-icons/bs';
-import metroPng from "../MetroPng.png"
+import metroPng from "../MetroPng.png";
 
 const RouteList = (props) => {
 
@@ -11,25 +11,17 @@ const RouteList = (props) => {
         start = path[0].toUpperCase();
         end = path.slice(-1)[0].toUpperCase();
         interchange = props.data.interchange;
-        console.log(interchange.length);
         if (interchange.length != 0) {
             interchange = interchange.map(i => i.toUpperCase());
         }
         colors = []
-        let i = 1;
-        
-        while(props.data["line"+i] != undefined) {
-            let cur = props.data["line"+i]
-            if(i > 1) {
-                if(colors.slice(-1)[0] == cur[0]) {
-                    cur = cur.slice(0);
-                }
-            }
-            cur.forEach(c => {
-                colors.push(c.toUpperCase());
-            })
+        colors.push(props.data["line"+1][0].toUpperCase());
+        let i = 0;
+        while(props.data["line"+2].length > i) {
+            colors.push(props.data["line"+2][i].toUpperCase())
             i++;
         }
+        
         startColor = colors[0];
         endColor = colors.slice(-1)[0];
         colorIdx = 0;
@@ -39,12 +31,10 @@ const RouteList = (props) => {
         if(name === interchange[colorIdx]) {
             colorIdx++;
         }
-        return <p className = "station-name" id = {idx} style = {{color: colors[colorIdx]}}>{name}</p>;
+        return <p className = "station-name" key = {idx} style = {{color: colors[colorIdx]}}>{name}</p>;
     }
 
     init();
-
-
 
     return <>
         <div className= "route-card">
@@ -70,6 +60,8 @@ const RouteList = (props) => {
             {path.map((station, idx) => {
                 return printName(station, idx);
             })}
+            <hr />
+            <p>Total Fare: ₹ XX</p>
         </div>
     </>
 }
