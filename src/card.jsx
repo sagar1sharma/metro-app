@@ -17,22 +17,18 @@ function Card(props){
         const destination = toRef.current.value;
 
         axios.get('https://corsproxy.io/?https://us-central1-delhimetroapi.cloudfunctions.net/route-get?from='+source+'&to='+destination)
-        .then(res => navigate(
-            "/route", {state: res.data}
-        ))
+        .then(res => navigate("/route", {state: res.data}))
         .catch(err => console.log(err))
 
-        
-    
   }
 
     return(<div>
         <div className="card"></div>
             <img className='ln' src={ln}></img>
             <form>
-                <input className="from" type="text" name="from" ref={fromRef}></input>
-                <input className="to" type="text" name="to" ref={toRef}></input>
-                <input className="btn show" onClick={handleClick} type="submit" value="submit"></input>
+                <input className="from" type="text" name="from" placeHolder=" From Station" ref={fromRef}></input>
+                <input className="to" type="text" name="to" placeHolder=" To Station" ref={toRef}></input>
+                <input className="btn show" onClick={handleClick} type="submit" value="Show Route"></input>
             </form>
         </div>
     );

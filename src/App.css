@@ -1,9 +1,8 @@
 .background{
-position: absolute;
-width: 1440px;
-height: 672px;
-left: 0px;
-top: 0px;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  z-index: -1;
 }
 
 .header{
@@ -42,7 +41,7 @@ bottom: 16.65%;
 
 .dateAndTime{
   position: absolute;
-width: 277px;
+width: 320px;
 height: 28px;
 left: 581px;
 top: 139px;
@@ -74,6 +73,16 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 16px;
 }
 
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+  text-align: center;
+}
+
+
 .ln{
   position: absolute;
   width: 78px;
@@ -101,7 +110,7 @@ border-radius: 4px;
 
 .show{
   width: 118px;
-height: 16px;
+height: 26px;
 
 font-family: 'Arial';
 font-style: normal;
@@ -130,12 +139,14 @@ flex-grow: 0;
   
   position: absolute;
   width: 267px;
-  height: 50px;
+  height: 40px;
   left: 585px;
   top: 407px;
+  border-radius: 10px;
   
   background: #FFFFFF;
 }
+
 
 .to{
 display: flex;
@@ -145,9 +156,10 @@ padding: 0px;
 
 position: absolute;
 width: 267px;
-height: 50px;
+height: 40px;
 left: 585px;
 top: 472px;
+border-radius: 10px;
 
 background: #FFFFFF;
 }
@@ -182,4 +194,64 @@ top: 815px;
   position: absolute;
   left: 762px;
   top: 830px;
+}
+
+/* Inside Route Page */
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.route-card {
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  padding: 10px;
+}
+
+.map {
+  height: auto;
+  width: 100%;
+  max-width: 1000px;
+  object-fit: contain;
+  border: 2px dotted black;
+  border-radius: 10px;
+  transition: transform 0.2s ease-out;
+}
+
+.map:hover {
+  transform: scale(2); 
+}
+
+.route-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.route-src h4{
+  margin: 0 4px;
+}
+
+.route-src p {
+  margin: 0px;
+}
+
+.arrow {
+  padding-bottom: 15px;
+  margin: 0;
+}
+
+.station-name {
+  font-size: 15px;
+}
+
+.small-logo {
+  width: 15px;
+  height: auto;
+  padding-right: 5px;
 }
