@@ -1,12 +1,11 @@
 import {useLocation} from 'react-router-dom';
-import mapImg from "./metroMap.jpeg"
-import Background from '../Background.jpg';
+import mapImg from "../images/metroMap.jpeg"
+import Background from '../images/Background.jpg';
 import RoutList from "../components/RouteList"
 import ErrorMsg from '../components/ErrorMsg';
 
 function Route(){
     let data = useLocation().state;
-    console.log(data);
     
     let status = data.status;
     

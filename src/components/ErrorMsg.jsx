@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 const ErrorMsg = props => {
+
+    const Navigate = useNavigate();
 
     const showErr = status => {
         let msg = ""
@@ -22,10 +26,15 @@ const ErrorMsg = props => {
         return msg;
     }
 
+    function handleClick(){
+        Navigate("/");
+    }
+
     return <>
         <div className= "route-card route-heading">
             <h1>Error!  </h1>
-            <h3> {showErr(props.statusCode)}</h3>
+            <h3> {showErr(props.statusCode)}</h3><br></br>
+            <button id="takemeback" onClick={handleClick}>Take Me Back!</button>
         </div>
     </>
 }

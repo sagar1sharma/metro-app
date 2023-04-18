@@ -1,11 +1,12 @@
-import Background from '../Background.jpg';
-import Header from '../Header';
-import Card from '../card.jsx';
-import logo from '../path6.png';
-import line from '../Line 1.png';
+import Background from '../images/Background.jpg';
+import Header from '../components/Header';
+import Card from '../components/card.jsx';
+import logo from '../images/path6.png';
+import line from '../images/Line 1.png';
 import axios from 'axios';
 import "../App.css";
 import {useState} from 'react';
+import Footer from '../components/Footer';
 
 function Home(){
     const day = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -17,20 +18,18 @@ function Home(){
 
     return(
         <div className="App">
-     <img className = "background" src = {Background} alt = "this"></img>
-     <div className='dateAndTime'>{day[date.getDay()]} {date.getDate()}/{date.getMonth()}/{date.getFullYear()}  {date.getHours()}:{date.getMinutes()}</div>
-     <div className = 'weather dateAndTime'>{weather} °C <br></br> New Delhi</div>
-     <Card />
-     <img className='slogo' src={logo}></img>
-     <img className='line1' src={line}></img>
-     <img className='line2' src={line}></img>
-     <img className='line3' src={line}></img>
-     <img className='line4' src={line}></img>
-     
-     <Header />
-
-     <div className='footer'><p>Designed By Vishal<br></br>Developed by Abhay and Sagar</p></div>
-    </div>
+            <Header />
+            <img className = "background" src = {Background} alt = "this"></img>
+            <div className='dateAndTime'>{day[date.getDay()]} {date.getDate()}/{date.getMonth()}/{date.getFullYear()}  {date.getHours()}:{date.getMinutes()}</div>
+            <div className = 'weather dateAndTime'>{weather} °C <br></br> New Delhi</div>
+            <Card />
+            <img className='slogo' src={logo}></img>
+            <img className='line1' src={line}></img>
+            <img className='line2' src={line}></img>
+            <img className='line3' src={line}></img>
+            <img className='line4' src={line}></img>
+            <Footer />
+        </div>
     );
 }
 

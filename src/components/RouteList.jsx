@@ -1,5 +1,5 @@
 import { BsFillArrowRightSquareFill } from 'react-icons/bs';
-import metroPng from "../MetroPng.png";
+import metroPng from '../images/metroMap.jpeg';
 
 const RouteList = (props) => {
 
@@ -61,7 +61,6 @@ const RouteList = (props) => {
                 return printName(station, idx);
             })}
             <hr />
-            <p>Total Fare: ₹ XX</p>
         </div>
     </>
 }

@@ -1,4 +1,4 @@
-import ln from './logoandname.png';
+import ln from '../images/logoandname.png';
 import {useRef} from 'react';
 import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
@@ -26,8 +26,8 @@ function Card(props){
         <div className="card"></div>
             <img className='ln' src={ln}></img>
             <form>
-                <input className="from" type="text" name="from" placeHolder=" From Station" ref={fromRef}></input>
-                <input className="to" type="text" name="to" placeHolder=" To Station" ref={toRef}></input>
+                <input className="from" type="text" name="from" placeholder=" From Station" ref={fromRef}></input>
+                <input className="to" type="text" name="to" placeholder=" To Station" ref={toRef}></input>
                 <input className="btn show" onClick={handleClick} type="submit" value="Show Route"></input>
             </form>
         </div>
