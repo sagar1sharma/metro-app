@@ -23,6 +23,7 @@ footer{
   height: 50px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   background-color: rgb(10,20,53);
   top: 970px;
